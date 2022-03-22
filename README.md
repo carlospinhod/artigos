@@ -4,3 +4,5 @@ Neste artigo falo sobre o que são as metodologias ágeis e como estas podem def
 Brevemente irei descrever cada uma das metodologias que tenho estudado!
 
 9 de Dezembro, 2021
+
+Criei este repositório depois de tomar a decisão que não iria continuar a ter um website próprio, com o objetivo de guardar a informação nele guardada.
