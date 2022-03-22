@@ -2,3 +2,5 @@ Sendo um aspirante a programador, e não me podendo provar através de experienc
 
 Neste artigo falo sobre o que são as metodologias ágeis e como estas podem definir o sucesso de um projeto de desenvolvimento de software.
 Brevemente irei descrever cada uma das metodologias que tenho estudado!
+
+9 de Dezembro, 2021
