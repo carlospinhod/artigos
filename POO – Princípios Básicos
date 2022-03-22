@@ -1,0 +1,61 @@
+A Programação Orientada a Objetos ou POO é um paradigma de programação baseado no conceito de Objetos, que podem conter atributos e métodos.
+
+Em POO, os programas são projetados por meio da composição de objetos que interagem com outros objetos. Muitas linguagens de programação permitem a utilização deste paradigma, e são normalmente baseadas em classes, isto significa que os objetos são instâncias de classes.
+
+Objetos
+O termo “Objetos” é utilizado para representar um determinado elemento do mundo real.
+
+Objetos são instâncias de classes, que determinam qual é a informação que compõe um objeto e como podemos manipulá-la. É uma entidade capaz de reter um estado/informação e oferece uma série de operações/comportamentos. Estas operações servem para consultar ou modificar a informação do objeto.
+
+Atributos
+Os objetos do mundo real possuem propriedades que contêm valores. Estes valores definem o estado do objeto e são designados por atributos em POO.
+
+Estes valores podem ser alterados apenas por estímulos externos ou internos, através da utilização de métodos.
+
+Métodos
+São procedimentos ou funções que realizam as ações próprias do objeto. Assim os métodos são as ações que o objeto pode realizar. É através dos métodos que que um objeto se manifesta, e interage com outros objetos.
+
+Classes
+Uma classe representa um conjunto de objetos que possuem características e comportamentos comuns. Um objeto é uma instância de classe, ou seja, criam-se objetos baseados nas características definidas nas classes.
+
+Ao criarmos dois objetos diferentes dentro da mesma classe/categoria, significa que os dois objetos terão os mesmos tipos de atributos e métodos, mas com valores de atributos diferentes. Ou seja, a classe define a estrutura do objeto.
+
+É também recorrente o recurso a SubClasses e SuperClasses, nas quais as Subclasses tem características (atributos e métodos) que partilham entre si, e estas pertencem a uma SuperClasse. A utilização deste tipo de hierarquia permite-nos omitir a declaração de um objeto na classe inferior aquilo que foi definido na classe superior. Assim poderemos atribuir aos objetos apenas os valores de atributos que os diferenciam.
+
+Instanciação
+A instanciação é quando a classe produz um objeto, como se ela fosse uma espécie de modelo para a criação de objetos.
+
+Fundamentos POO
+Abstração
+Abstração é o princípio pelo qual cada componente deve manter oculta uma decisão de projeto única, ou seja, para a utilização de um componente, devemos tornar público apenas o mínimo e indispensável de informação para realizar a operação.
+
+Utilizando o princípio de abstração, isolamos os objetos que queremos representar do ambiente complexo em que se situam, e nesses objetos representamos só as características que são relevantes para o problema.
+
+O uso da abstração permite também que determinadas partes do problema ganhem maior peso, e dessa maneira, alguns detalhes podem ser desconsiderados em determinados momentos, para que outros sejam considerados.
+
+Encapsulamento
+Encapsulamento é o princípio no qual cada componente de um programa deve agregar toda a informação relevante para a sua manipulação, como uma unidade/cápsula. Utilizado juntamente com o conceito de abstração, é um poderoso mecanismo da POO. Na POO os dados e os processos que tratam esses dados estão encapsulados numa única entidade. A única maneira de conhecer ou alterar os atributos de um objeto é através da utilização dos respetivos métodos.
+
+O encapsulamento é um dos grandes trunfos que a POO oferece em relação à programação tradicional/estruturada. A vantagem da utilização do encapsulamento é que disponibiliza o objeto com toda a sua funcionalidade sem dar a conhecer como este funciona internamente, nem a sua forma de armazenamento de dados.
+
+Herança
+A Herança é o mecanismo pelo qual uma classe obtém as características e métodos de outra, para expandi-la ou especializá-la de alguma forma. Com isto podemos ver que iremos utilizar um mecanismo inteligente para reaproveitamento de código.
+
+É através do conceito de Herança que os Objetos podem partilhar métodos e atributos. Assim uma SubClasse que é criada a partir de uma SuperClasse herda os atributos e métodos dessa mesma SuperClasse.
+
+Polimorfismo
+O Polimorfismo traduz-se na capacidade de uma variável se referir em tempo de execução a objetos de diversas classes. Ou explicado de outra forma, a capacidade que diferentes objetos têm para responder a uma mesma mensagem.
+
+O Polimorfismo ocorre quando um método que já foi definido na SuperClass é redefinido na SubClass com um comportamento diferente.
+
+ 
+Vantagens e Benefícios da POO
+A POO consiste em conceber um sistema computacional como um todo orgânico formado por objetos que se relacionam entre si, esta perspetiva pode ser aplicada, tanto na análise de sistemas, como à programação, e essa é uma das principais vantagens da POO, a mesma metodologia serve tanto para a definição lógica do sistema como para a sua implementação.
+
+Podemos também considerar as seguintes vantagens.
+
+União entre dados e processos;
+Consistência entre análise e desenvolvimento;
+Reutilização e aumento da produtividade;
+Facilita o trabalho em equipa;
+Facilidade na manutenção;
