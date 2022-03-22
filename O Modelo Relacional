@@ -1,0 +1,105 @@
+O modelo relacional foi concebido no final dos anos 60, por E. F. Codd, em 1976, Peter Chen impulsiona este modelo ao salientar a importância da modelização entidades-relacionamentos. De acordo com o proposto para um modelo relacional, os dados referentes a qualquer realidade podem ser organizados em entidades relacionadas entre si. As Entidades podem representar coisas físicas, descritas e caracterizadas através de propriedades, estas podem também representar eventos.
+
+Um dos motivos para o sucesso do modelo relacional deve-se ao facto de separar de forma rigorosa, duas perspectivas ou modos de lidar com os dados, a visão lógica e visão interna. Outro dos motivos para o sucesso do modelo relacional prende-se com o facto de ter eliminado as anomalias dos modelos anteriores, utilizando o processo de normalização.
+
+Conceitos Básicos
+Relação
+Estrutura fundamental do modelo relacional. É uma estrutura bidimensional com um determinado esquema e zero ou mais instâncias,
+
+Atributo
+Constituinte do esquema de relação, também conhecido como coluna (de uma tabela) ou campo. Indica o tipo de conteúdo a armazenar.
+
+Tuplo
+Designação de cada instância do esquema de relação. Também conhecido como linha (de uma tabela).
+
+Domínio do atributo
+Traduz a gama de valores que esse atributo pode tomar.
+
+Grau da relação
+Número de atributos que constitui o esquema da relação.
+
+Cardinalidade da relação
+Número de tuplos da relação.
+
+Características das relações
+O valor de cada atributo num tuplo é atómico, ou seja, no cruzamento de uma linha com uma coluna só é possível encontrar um valor.
+Os atributos de uma relação devem ter identificadores distintos. Em relações diferentes podem aparecer atributos com o mesmo identificador.
+Os Tuplos de uma relação devem ser distintos.
+A ordem dos tuplos numa relação, ou a ordem dos atributos no seu esquema não tem qualquer significado.
+Os valores de um dado atributos provêm do seu domínio. Um atributo desconhecido num tuplo é atribuído com o valor NULL.
+
+Chave de uma relação
+A definição de uma chave primária é importante para que se possa identificar univocamente cada tuplo na relação. Para compreender melhor existem algumas definições que podemos utilizar:
+
+Superchave – Associação de um ou mais atributos cujos valores, em conjunto, identificam univocamente cada tuplo.
+Chave Candidata – Subconjunto dos atributos de uma superchave que, sendo ainda superchave, não pode ser reduzido sem perder essa qualidade.
+Chave Primária – Selecionada entre as várias chaves candidatas.
+Chave Estrangeira – Conjunto de um ou mais atributos que é chave primária numa outra relação. A existência de uma chave primária prende-se com a necessidade de manter interligação entre essa relação e a relação onde esse conjunto de atributos é chave primária
+Normalização
+A Normalização é um processo que melhora a organização da informação e diminui a redundância nos dados. Desde a criação do modelo relacional, foram identificadas diversas anomalias na organização da informação para as quais foram propostas soluções teóricas correspondentes, ou regras de normalização.
+
+O processo de normalização é composto por um conjunto de fases, que tem como objetivo final a diminuição da redundância dos dados e aumentar o número de relações entre as tabelas, aumentando a redundância nas chaves.
+
+Utilizando um exemplo, abaixo uma relação não normalizada:
+
+Fatura
+
+(Nº_Fatura, Nº_Cliente, Nome_Cliente, Morada_Cliente, Data, Cód_Artigo, Nome_Artigo, Quantidade)
+
+
+
+Primeira Regra
+Eliminar os grupos de valores repetidos.
+
+Para atingirmos uma tabela normalizada utilizando a primeira regra devemos criar uma nova tabela, ligada através de uma chave estrangeira, devemos então eliminar os atributos Cód_Artigo, Nome_Artigo, Quantidade.
+
+Assim podemos dizer que a base de dados está agora na primeira forma normal.
+
+Fatura
+
+(Nº_Fatura, Nº_Cliente, Nome_Cliente, Morada_Cliente, Data)
+
+Linha_Fatura
+
+(Nº_Fatura*, Cód_Artigo, Nome_Artigo, Quantidade)
+
+
+
+Segunda Regra
+Todos os atributos pertencentes a qualquer chave candidata devem depender da totalidade da chave e não apenas de parte dela. 
+
+Eliminam-se, assim, as dependências parciais da chave primária.
+
+Seguindo o mesmo exemplo, vemos que o atributo Nome_Artigo depende apenas de parte da chave primária: depende de Cód_Artigo e não de Nº_de_Fatura, a consequência é a redundancia.
+
+A segunda regra de normalização elimina a dependência parcial da chave primária existente na relação original e cria uma nova relação, ligando as duas relações através de uma chave estrangeira.
+
+Linha_Fatura
+
+(Nº_Fatura*, Cód_Artigo*, Quantidade)
+
+Artigo
+
+(Cód_Artigo, Nome_Artigo)
+
+
+A Base de dados encontra-se agora na segunda forma normal.
+
+
+Terceira Regra
+Eliminar dependências funcionais entre os atributos que não pertencem à chave primária.
+
+Para seguir a terceira regra teremos que eliminar as duas dependências existentes no exemplo, Nome_Cliente e Morada_Cliente dependem do Nº_Cliente que não é chave primária. 
+
+ 
+
+Fatura
+
+(Nº_Fatura, Cód_Artigo*, Data)
+
+Cliente
+
+(Nº_Cliente, Nome_Cliente, Morada_Cliente)
+
+
+Temos agora uma base de dados na terceira forma normalizada.
